@@ -25,14 +25,27 @@ Source: [An Introduction to Statistical Learning](https://www.statlearning.com/r
 5. **Interpretation**: Examined R², coefficient, and p-value to derive business insights.
 
 ## Key Findings
-- **Model**: Sales = 7.03 + 0.0475 × TV  
-- **R² = 0.612** → 61.2% of Sales variability explained by TV alone.
-- **p-value < 0.001** → TV’s effect is statistically significant.
-- Every additional $1,000 spent on TV advertising generates approximately **47.5 additional units sold**.
+R²	0.999	TV spend explains 99.9% of variance in Sales
+Adj. R²	0.999	Confirms no over-fitting with single predictor
+Intercept (β₀)	-0.1325	Negligible; p=0.188 (not statistically significant)
+TV Coefficient (β₁)	3.5615	Every 
+3,561.50 in Sales**
+p-value (TV)	< 0.0001	Highly significant — reject H₀
+F-statistic	4,517,000	Model is globally significant
+Durbin-Watson	1.998	~2.0 → no serial autocorrelation
+Jarque-Bera p	0.985	Residuals are normally distributed ✓
 
 ## Recommendation
-**Allocate the largest portion of the marketing budget to TV advertising.**  
-TV delivers the highest ROI per dollar spent among the three channels. The model provides a simple, interpretable tool for forecasting sales based on TV spend. Further analysis could incorporate interaction effects or non-linear relationships.
+TV is the highest-confidence marketing investment. While its per-dollar return (
+1) is lower than Radio or Social Media in isolation, it provides near-perfect predictability (R²=0.999), 
+allowing reliable sales forecasting and budget planning. A 
+178,075 in incremental sales.
+
+Strategic Budget Allocation Suggestion:
+
+Primary channel: TV (60–70% of budget) — highest reliability for revenue forecasting
+Secondary: Radio (20–25%) — strong correlation, decent ROI
+Experimental: Social Media (10–15%) — high raw coefficient but noisy; test and measure carefully
 
 ## Environment Setup
 1. Clone this repository.
